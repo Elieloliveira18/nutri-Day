@@ -31,7 +31,7 @@
             position: relative;
             height: 100vh;
             max-height: 800px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1 );
             display: flex;
             align-items: center;
             justify-content: center;
@@ -194,46 +194,13 @@
         .plan-card, .price-card, .testimonial-card, .service-card {
             flex: 1;
             min-width: 250px;
+            background-color: white;
             padding: 1.8rem;
             border-radius: 8px;
             margin-bottom: 1rem;
             border: 1px solid #E0E0E0;
             transition: all 0.3s ease;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            position: relative;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Adicionando imagens de fundo específicas para cada card */
-        .service-card.celiacos {
-            background-image: url('celiacos-cover.jpg');
-        }
-
-        .service-card.diabeticos {
-            background-image: url('e-book Diabetes .png');
-        }
-
-        .service-card.hipertensos {
-            background-image: url('hipertensos-cover.jpg');
-        }
-
-        /* Overlay para legibilidade */
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.85); /* Fundo branco semi-transparente */
-            z-index: 1;
-        }
-
-        .service-card > * {
-            position: relative;
-            z-index: 2; /* Conteúdo acima do overlay */
         }
 
         .plan-card:hover, .price-card:hover, .testimonial-card:hover, .service-card:hover {
@@ -549,7 +516,7 @@
             <h2>Minha Abordagem</h2>
             <div class="content-section">
                 <div class="content-image">
-                    <img src="Daiany (6).JPG" alt="Foto de Daiany Fernandes em consulta">
+                    <img src="image00024.jpeg" alt="Foto de Daiany Fernandes em consulta">
                 </div>
                 <div class="content-text">
                     <p>Sou Daiany, Nutricionista Clínica comportamental dedicada a integrar o melhor da nutrição para promover uma transformação completa na sua saúde. Acredito que uma alimentação equilibrada não apenas nutre o corpo, mas também fortalece a mente e impulsiona o desempenho atlético.</p>
@@ -559,7 +526,7 @@
             </div>
         </div>
 
-        <!-- Seção Sobre Mim Unificada (mantendo layout original) -->
+        <!-- Seção Sobre Mim Unificada (mantendo layout original ) -->
         <div class="section reveal">
             <h2>Sobre Mim</h2>
             <div class="content-section alternate-layout">
@@ -578,206 +545,151 @@
                 </div>
                 <div class="content-text">
                     <p>Eu caía no ciclo de culpa, comia por ansiedade e achava que nunca ia conseguir. Mas um dia, cansei de lutar contra mim mesma e decidi tentar algo diferente: mudar meus hábitos, de dentro para fora.</p>
-                    <p>Foi aí que tudo mudou. Aprendi a me alimentar de um jeito que nutre o corpo e a alma, sem me punir. Trabalhei minhas emoções, parei de usar a comida como muleta e comecei a me ouvir de verdade. O resultado? Hoje eu vivo em um corpo saudável e magro, mas, mais do que isso, me sinto leve, feliz e no controle da minha vida. Esse processo transformou tudo pra mim – e é exatamente isso que quero compartilhar com você.</p>
-                    <p>Você não precisa ser perfeita. Eu não fui. Mas vou te mostrar que, com pequenos passos e as ferramentas certas, você também pode transformar sua alimentação e encontrar o equilíbrio que sempre sonhou. Vamos juntos?</p>
+                    <p>Foi aí que tudo mudou. Aprendi a me alimentar de um jeito que nutre o corpo e a alma, sem dietas restritivas, sem culpa, sem terrorismo nutricional. E foi assim que eu emagreci, de forma saudável e sustentável, e me tornei uma nutricionista apaixonada por ajudar outras pessoas a encontrarem esse mesmo caminho.</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Seção O que você irá receber -->
-        <div class="section reveal receive-section">
-            <div class="receive-content">
-                <h2>O que você irá receber no acompanhamento nutricional</h2>
-                <ul>
-                    <li>Atendimento totalmente individualizado com foco em seus objetivos e necessidades;</li>
-                    <li>Anamnese completa para conhecer sua rotina, gostos, hábitos e histórico;</li>
-                    <li>Avaliação física completa (adipômetro, bioimpedância, análises clínicas);</li>
-                    <li>Plano alimentar individualizado (disponível em até 5 dias úteis);</li>
-                    <li>Aplicativo exclusivo para monitorar progresso, plano alimentar e receitas;</li>
-                    <li>Prescrição de manipulados e suplementos (se necessário);</li>
-                    <li>Suporte via WhatsApp durante todo o acompanhamento.</li>
-                </ul>
-                <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento!" class="btn" aria-label="Saiba mais sobre o acompanhamento via WhatsApp">Saiba Mais</a>
-            </div>
-            <div class="receive-image">
-                <img src="WhatsApp_Image_2025-03-29_at_17.41.03-removebg-preview.png" alt="Imagem do aplicativo exclusivo">
             </div>
         </div>
 
         <!-- Seção Áreas de Atuação -->
         <div class="section reveal">
-            <h2>Minhas Áreas de Atuação</h2>
+            <h2>Áreas de Atuação</h2>
             <div class="areas-section">
                 <div class="areas-list">
                     <ul>
-                        <li>Reeducação alimentar</li>
-                        <li>Emagrecimento</li>
-                        <li>Hipertrofia</li>
-                        <li>Vegetarianismo</li>
-                        <li>Pré e pós-operatório</li>
-                        <li>Gestantes e lactantes</li>
-                        <li>Tratamento de patologias (hipertensão, diabetes, hipercolesterolemia...)</li>
-                        <li>Transtornos alimentares (bulimia, anorexia, compulsão alimentar...)</li>
+                        <li>Emagrecimento e Reeducação Alimentar</li>
+                        <li>Nutrição Esportiva</li>
+                        <li>Doenças Crônicas (Diabetes, Hipertensão, Dislipidemias)</li>
+                        <li>Saúde Intestinal</li>
+                        <li>Alergias e Intolerâncias Alimentares</li>
+                        <li>Nutrição na Gestação e Amamentação</li>
+                        <li>Nutrição Infantil</li>
+                        <li>Transtornos Alimentares (em conjunto com equipe multidisciplinar)</li>
                     </ul>
                 </div>
                 <div class="areas-image">
-                    <img src="3(1).png" alt="Dra. Daiany realizando avaliação física em paciente">
+                    <img src="3(1).png" alt="Áreas de atuação da nutricionista">
                 </div>
             </div>
         </div>
 
-        <!-- Seção Planos -->
+        <!-- Seção Planos de Consulta -->
         <div class="section reveal">
-            <h2>Planos</h2>
+            <h2>Planos de Consulta</h2>
             <div class="plans">
                 <div class="plan-card">
+                    <h3>Consulta Online Individual</h3>
+                    <p>Atendimento personalizado e flexível, ideal para quem busca acompanhamento nutricional de qualquer lugar.</p>
+                    <ul>
+                        <li>Avaliação completa</li>
+                        <li>Plano alimentar individualizado</li>
+                        <li>Suporte via WhatsApp</li>
+                        <li>Material de apoio exclusivo</li>
+                    </ul>
+                    <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Consulta%20Online%20Individual!" class="btn" aria-label="Saber mais sobre Consulta Online Individual">Saber Mais</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Acompanhamento Semestral</h3>
+                    <p>Programa de 6 meses com consultas regulares para resultados duradouros e suporte contínuo.</p>
+                    <ul>
+                        <li>6 consultas (uma a cada mês)</li>
+                        <li>Ajustes no plano alimentar</li>
+                        <li>Análise de evolução</li>
+                        <li>Material de apoio exclusivo</li>
+                        <li>Suporte via whatsapp</li>
+                    </ul>
+                    <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Acompanhamento%20Trimestral!" class="btn" aria-label="Saber mais sobre Acompanhamento Trimestral">Saber Mais</a>
+                </div>
+                <div class="plan-card">
                     <h3>Consulta Avulsa</h3>
-                    <p>1 Consulta + 1 retorno (até 50 dias)<br>Avaliação física completa<br>1 Plano alimentar personalizado<br>Aplicativo exclusivo<br>Suporte via WhatsApp por 50 dias</p>
-                    <a href="https://wa.me/5541996009717?text=Olá,%20quero%20agendar%20uma%20consulta%20avulsa!" class="btn" aria-label="Agendar consulta avulsa via WhatsApp">Agendar</a>
-                </div>
-                <div class="plan-card">
-                    <h3>Semestral</h3>
-                    <p>6 Consultas (1 por mês)<br>Avaliação física completa<br>Suporte via WhatsApp<br>Aplicativo exclusivo</p>
-                    <a href="https://wa.me/5541996009717?text=Olá,%20quero%20o%20plano%20semestral!" class="btn" aria-label="Agendar plano semestral via WhatsApp">Agendar</a>
-                </div>
-                <div class="plan-card">
-                    <h3>Online</h3>
-                    <p>Consultas mensais ou avulsas (via WhatsApp)<br>Suporte via WhatsApp<br>Aplicativo exclusivo</p>
-                    <a href="https://wa.me/5541996009717?text=Olá,%20quero%20o%20plano%20online!" class="btn" aria-label="Agendar plano online via WhatsApp">Agendar</a>
+                    <p>Atendimento na clínica para uma experiência mais próxima e detalhada.</p>
+                    <ul>
+                       <li>consulta e retorno em 50 dias</li>
+                        <li>Avaliação física completa</li>
+                        <li>Plano alimentar personalizado</li>
+                        <li>Orientações práticas</li>
+                        <li>Material exclusivo</li>
+                    </ul>
+                    <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Consulta%20Presencial!" class="btn" aria-label="Saber mais sobre Consulta Presencial">Saber Mais</a>
                 </div>
             </div>
         </div>
 
-        <!-- Seção Investimento -->
-        <div aforesaid="section reveal">
-            <h2>Investimento</h2>
-            <div class="pricing">
-                <div class="price-card">
-                    <h3>Consulta Avulsa/Online</h3>
-                    <p><strong>Individual:</strong> R$400,00 (Pix/Dinheiro ou até 2x no cartão)<br><strong>Casal/Dupla:</strong> R$740,00 (Pix/Dinheiro ou até 2x no cartão)</p>
-                </div>
-                <div class="price-card">
-                    <h3>Plano Semestral</h3>
-                    <p><strong>Individual:</strong> R$1000,00 (Pix/Dinheiro) ou R$1090,00 (até 6x no cartão)<br><strong>Casal/Dupla:</strong> R$1900,00 (Pix/Dinheiro) ou R$2065,00 (até 6x no cartão)</p>
+        <!-- Seção Autoatendimento -->
+        <div class="section reveal">
+            <h2>Autoatendimento</h2>
+            <div class="self-service">
+                <div class="service-card">
+                    <img src="ebook.JPG" alt="Guia Completo de Supermercado" style="width: 200px; height: 250px; float: left; margin-right: 15px;">
+                    <h3>Guia Completo de Supermercado</h3>
+                    <p style="font-size: 1.1rem; font-weight: bold;">Aprenda a fazer escolhas inteligentes no supermercado e otimize suas compras para uma alimentação mais saudável e econômica.</p>
+                    <p class="bonus" style="font-size: 1.2rem; font-weight: bold; color: #FF4500;">De <span style="text-decoration: line-through;">R$ 67,00</span> por apenas R$ 47,00!</p>
+                    <a href="https://pag.ae/7_UkeZyw4" class="btn" target="_blank" aria-label="Comprar Guia Completo de Supermercado">Comprar Agora</a>
                 </div>
             </div>
-            <p><em>Não atendo por Plano de Saúde/Convênios, mas emito recibo para reembolso.</em></p>
         </div>
 
         <!-- Seção Depoimentos -->
         <div class="section reveal">
-            <h2>Depoimentos dos Pacientes</h2>
+            <h2>Depoimentos</h2>
             <div class="testimonials">
                 <div class="testimonial-card">
-                    <h3>Ana Silva</h3>
-                    <p>"A Daiany mudou minha relação com a comida! Com o plano alimentar personalizado, consegui perder peso sem passar fome e ainda melhorei minha energia no dia a dia."</p>
+                    <h3>Maria S.</h3>
+                    <p>"A Daiany mudou minha vida! Aprendi a comer de forma saudável sem abrir mão do prazer. Recomendo muito!"</p>
                 </div>
                 <div class="testimonial-card">
-                    <h3>Pedro Almeida</h3>
-                    <p>"Como atleta, o acompanhamento da Daiany foi essencial para otimizar meu desempenho. O suporte dela fez toda a diferença nos meus treinos e competições."</p>
+                    <h3>João P.</h3>
+                    <p>"Com o acompanhamento da Daiany, consegui atingir meus objetivos de forma consistente e sem radicalismos."</p>
                 </div>
                 <div class="testimonial-card">
-                    <h3>Mariana Costa</h3>
-                    <p>"A abordagem individualizada me ajudou a controlar minha compulsão alimentar. Hoje me sinto mais saudável e confiante, graças ao trabalho incrível da Daiany."</p>
+                    <h3>Ana L.</h3>
+                    <p>"Excelente profissional! Atenciosa, dedicada e com um conhecimento que realmente faz a diferença."</p>
                 </div>
             </div>
         </div>
 
-        <!-- Seção Área de Autoatendimento -->
+        <!-- Seção Contato e Localização -->
         <div class="section reveal">
-            <h2>Área de Autoatendimento</h2>
-            <p>Escolha o eBook perfeito para suas necessidades e receba bônus exclusivos!</p>
-            <div class="self-service">
-                <div class="service-card celiacos">
-                    <h3>Dieta para Celíacos</h3>
-                    <p>Guia completo com receitas e dicas para uma vida sem glúten.</p>
-                    <p><strong>Preço: R$39,90</strong></p>
-                    <a href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=CELIACO_ID" class="btn" target="_blank" aria-label="Comprar eBook Dieta para Celíacos">Comprar Agora</a>
-                    <p class="bonus">Bônus: Guia Básico de Nutrição + Receitas Rápidas</p>
-                </div>
-                <div class="service-card diabeticos">
-                    <h3>Dieta para Diabéticos</h3>
-                    <p>Estratégias e receitas para controlar a glicemia com sabor.</p>
-                    <p><strong>Preço: R$39,90</strong></p>
-                    <a href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=DIABETICO_ID" class="btn" target="_blank" aria-label="Comprar eBook Dieta para Diabéticos">Comprar Agora</a>
-                    <p class="bonus">Bônus: Guia Básico de Nutrição + Receitas Rápidas</p>
-                </div>
-                <div class="service-card hipertensos">
-                    <h3>Dieta para Hipertensos</h3>
-                    <p>Plano alimentar para reduzir a pressão arterial naturalmente.</p>
-                    <p><strong>Preço: R$39,90</strong></p>
-                    <a href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=HIPERTENSO_ID" class="btn" target="_blank" aria-label="Comprar eBook Dieta para Hipertensos">Comprar Agora</a>
-                    <p class="bonus">Bônus: Guia Básico de Nutrição + Receitas Rápidas</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Seção de Contato e Localização -->
-        <div class="contact-location reveal">
-            <!-- Seção de Contato -->
-            <div class="contact-section">
-                <h2>Entre em Contato</h2>
-                <form action="mailto:nutri.fernandesdaiany@gmail.com" method="post" enctype="text/plain">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" required></textarea>
+            <h2>Contato</h2>
+            <div class="contact-location">
+                <div class="contact-section">
+                    <p>Entre em contato para agendar sua consulta ou tirar suas dúvidas:</p>
+                    <p><strong>Telefone:</strong> (41 ) 99600-9717</p>
+                    <p><strong>Email:</strong> contato@daianyfernandesnutri.com.br</p>
                     <div class="contact-buttons">
-                        <button type="submit" class="btn">Enviar por Email</button>
-                        <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20entrar%20em%20contato!" class="btn" target="_blank" aria-label="Entrar em contato via WhatsApp">Contato via WhatsApp</a>
+                        <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!" class="btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:contato@daianyfernandesnutri.com.br" class="btn" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
                     </div>
-                </form>
-            </div>
-
-            <!-- Seção de Localização -->
-            <div class="location-section">
-                <h2>Localização</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7798079380023!2d-49.4010809!3d-25.578991499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd032d19c711a1%3A0x44f21be04cec2b46!2sNutricionista%20-%20Daiany%20Fernandes!5e0!3m2!1spt-BR!2sbr!4v1742934612161!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- Seção de Localização -->
+                <div class="location-section">
+                    <h2>Localização</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.2688675741115!2d-49.4007873!3d-25.5959805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd032d19c711a1%3A0x44f21be04cec2b46!2sNutricionista%20-%20Daiany%20Fernandes!5e0!3m2!1spt-BR!2sbr!4v1753884155789!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>© 2025 Nutricionista Daiany Fernandes. Todos os direitos reservados.</p>
-        <div class="social-btns">
-            <a href="https://wa.me/5541996009717" class="btn" target="_blank" aria-label="Contato via WhatsApp">WhatsApp</a>
-            <a href="https://www.instagram.com/nutri.daianyfernandes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn" target="_blank" aria-label="Perfil no Instagram">Instagram</a>
-        </div>
-    </footer>
 
     <!-- BOTÕES FLUTUANTES -->
     <div class="float-buttons">
-        <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!" 
-           class="float-btn whatsapp-btn" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           aria-label="Agendar consulta via WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-            <span>Agendar Consulta</span>
+        <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!" class="float-btn whatsapp-btn" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
         </a>
-        
-        <a href="https://www.instagram.com/nutri.daianyfernandes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-           class="float-btn instagram-btn" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-            <span>Instagram</span>
+        <a href="https://www.instagram.com/daianyfernandesnutri/" class="float-btn instagram-btn" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> <span>Instagram</span>
         </a>
     </div>
 
-    <!-- Script para ScrollReveal -->
+    <footer>
+        <p>&copy; 2025 Nutricionista Daiany Fernandes. Todos os direitos reservados.</p>
+        <div class="social-btns">
+            <a href="https://www.instagram.com/daianyfernandesnutri/" class="btn" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/daianyfernandesnutri/" class="btn" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.linkedin.com/in/daianyfernandesnutri/" class="btn" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+    </footer>
+
     <script>
-        ScrollReveal().reveal('.reveal', {
-            duration: 1000,
-            distance: '30px',
-            origin: 'bottom',
-            easing: 'ease-in-out',
-            delay: 200,
-            interval: 200
-        });
+        ScrollReveal( ).reveal('.reveal', { delay: 200, distance: '50px', origin: 'bottom', interval: 100 });
     </script>
 </body>
 </html>
