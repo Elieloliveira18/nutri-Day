@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nutricionista Daiany Fernandes | Consultas online, planos alimentares e eBooks para celíacos, diabéticos e mais.">
+    <title>Nutricionista Daiany Fernandes | Consultas e eBooks Personalizados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Adicionando Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Adicionando ScrollReveal.js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #F8F8F8;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* HEADER COM IMAGEM EM TELA CHEIA AJUSTADA */
+        .header-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            max-height: 800px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+
+        /* BOTÕES FLUTUANTES */
+        .float-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .float-btn {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .float-btn i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .instagram-btn {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #9ACD32;
+        }
+
+        .section h2 {
+            color: #6B8E23;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            font-family: 'Amatic SC', cursive;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #FFA500;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            font-family: 'Roboto', sans-serif;
+            color: #555555;
+        }
+
+        /* LAYOUT DAS SEÇÕES COM IMAGEM E TEXTO */
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .content-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .content-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .content-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .alternate-layout {
+            flex-direction: row-reverse;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #9ACD32;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #7CB342;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .plans, .pricing, .testimonials, .self-service {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .plan-card, .price-card, .testimonial-card, .service-card {
+            flex: 1;
+            min-width: 250px;
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #E0E0E0;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Adicionando imagens de fundo específicas para cada card */
+        .service-card.celiacos {
+            background-image: url('celiacos-cover.jpg');
+        }
+
+        .service-card.diabeticos {
+            background-image: url('e-book Diabetes .png');
+        }
+
+        .service-card.hipertensos {
+            background-image: url('hipertensos-cover.jpg');
+        }
+
+        /* Overlay para legibilidade */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85); /* Fundo branco semi-transparente */
+            z-index: 1;
+        }
+
+        .service-card > * {
+            position: relative;
+            z-index: 2; /* Conteúdo acima do overlay */
+        }
+
+        .plan-card:hover, .price-card:hover, .testimonial-card:hover, .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #9ACD32;
+        }
+
+        .plan-card h3, .price-card h3, .testimonial-card h3, .service-card h3 {
+            color: #6B8E23;
+            margin-bottom: 1.2rem;
+            font-family: 'Amatic SC', cursive;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* SEÇÃO ÁREAS DE ATUAÇÃO */
+        .areas-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .areas-list {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .areas-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .areas-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .bonus {
+            font-size: 0.9rem;
+            color: #FFA500;
+            margin-top: 0.8rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #6B8E23;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer .social-btns {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        footer .social-btns .btn {
+            margin: 0;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+            background-color: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        footer .social-btns .btn:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        .receive-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .receive-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .receive-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .receive-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .receive-image img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .contact-location {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #555555;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #E0E0E0;
+            border-radius: 6px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: #9ACD32;
+            box-shadow: 0 0 0 2px rgba(154, 205, 50, 0.2);
+        }
+
+        form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-buttons .btn {
+            padding: 0.8rem 1.5rem;
+            font-size: 0.9rem;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .location-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .location-section h2 {
+            color: #6B8E23;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            font-family: 'Amatic SC', cursive;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .location-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #FFA500;
+        }
+
+        .location-section iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #555555;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #9ACD32;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                height: 70vh;
+                max-height: 500px;
+            }
+
+            .plans, .pricing, .testimonials, .self-service {
+                flex-direction: column;
+            }
+
+            .contact-location, .receive-section, .content-section, .areas-section {
+                flex-direction: column;
+            }
+
+            .content-image, .areas-image {
+                order: -1;
+            }
+
+            .alternate-layout {
+                flex-direction: column;
+            }
+
+            .contact-section, .location-section, .receive-content, .receive-image {
+                max-width: 100%;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .plan-card h3, .price-card h3, .testimonial-card h3, .service-card h3 {
+                font-size: 1.6rem;
+            }
+
+            .float-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .float-btn {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+
+            .float-btn i {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                height: 50vh;
+                max-height: 400px;
+            }
+
+            .float-btn span {
+                display: none;
+            }
+
+            .float-btn i {
+                margin-right: 0;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER COM IMAGEM EM TELA CHEIA AJUSTADA -->
+    <div class="header-container">
+        <img src="site nutricionista.png" alt="Daiany Fernandes Nutricionista" class="header-img">
+    </div>
+
+    <div class="container">
+        <!-- Seção Minha Abordagem -->
+        <div class="section reveal">
+            <h2>Minha Abordagem</h2>
+            <div class="content-section">
+                <div class="content-image">
+                    <img src="Daiany (6).JPG" alt="Foto de Daiany Fernandes em consulta">
+                </div>
+                <div class="content-text">
+                    <p>Sou Daiany, Nutricionista Clínica comportamental dedicada a integrar o melhor da nutrição para promover uma transformação completa na sua saúde. Acredito que uma alimentação equilibrada não apenas nutre o corpo, mas também fortalece a mente e impulsiona o desempenho atlético.</p>
+                    <p>Na minha abordagem, vou além da dieta tradicional. Foco no comportamento alimentar, entendendo que cada pessoa é única e merece um plano nutricional que se alinhe às suas metas e estilo de vida. Juntos, trabalharemos na construção de hábitos saudáveis, estabelecendo metas realistas e celebrando cada conquista ao longo do caminho.</p>
+                    <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!" class="btn" aria-label="Agendar consulta via WhatsApp">Agendar Consulta</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Sobre Mim Unificada (mantendo layout original) -->
+        <div class="section reveal">
+            <h2>Sobre Mim</h2>
+            <div class="content-section alternate-layout">
+                <div class="content-image">
+                    <img src="4(1).png" alt="Minha transformação pessoal">
+                </div>
+                <div class="content-text">
+                    <p>Eu já estive no seu lugar, mas antes de começar, quero te contar um pedacinho da minha história, porque eu sei como é estar onde você está agora. Eu já fui obesa, já passei por momentos bem difíceis na vida e carreguei traumas que, por muito tempo, eu tentei "resolver" com comida.</p>
+                    <p>Depois da minha gestação, meu corpo mudou, os quilos vieram e eu me vi perdida, tentando de tudo para emagrecer. Fiz dietas malucas – aquelas que prometem milagres, sabe? Me matava de tanto fazer aeróbicos, contava cada caloria, mas nada parecia funcionar de verdade. Por quê? Porque eu estava focada só no externo – nas regras, nos números, nos exercícios – e não no que realmente precisava mudar: meu comportamento, minha relação com a comida e comigo mesma.</p>
+                </div>
+            </div>
+            
+            <div class="content-section" style="margin-top: 2rem;">
+                <div class="content-image">
+                    <img src="2.png" alt="Minha jornada de transformação">
+                </div>
+                <div class="content-text">
+                    <p>Eu caía no ciclo de culpa, comia por ansiedade e achava que nunca ia conseguir. Mas um dia, cansei de lutar contra mim mesma e decidi tentar algo diferente: mudar meus hábitos, de dentro para fora.</p>
+                    <p>Foi aí que tudo mudou. Aprendi a me alimentar de um jeito que nutre o corpo e a alma, sem me punir. Trabalhei minhas emoções, parei de usar a comida como muleta e comecei a me ouvir de verdade. O resultado? Hoje eu vivo em um corpo saudável e magro, mas, mais do que isso, me sinto leve, feliz e no controle da minha vida. Esse processo transformou tudo pra mim – e é exatamente isso que quero compartilhar com você.</p>
+                    <p>Você não precisa ser perfeita. Eu não fui. Mas vou te mostrar que, com pequenos passos e as ferramentas certas, você também pode transformar sua alimentação e encontrar o equilíbrio que sempre sonhou. Vamos juntos?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção O que você irá receber -->
+        <div class="section reveal receive-section">
+            <div class="receive-content">
+                <h2>O que você irá receber no acompanhamento nutricional</h2>
+                <ul>
+                    <li>Atendimento totalmente individualizado com foco em seus objetivos e necessidades;</li>
+                    <li>Anamnese completa para conhecer sua rotina, gostos, hábitos e histórico;</li>
+                    <li>Avaliação física completa (adipômetro, bioimpedância, análises clínicas);</li>
+                    <li>Plano alimentar individualizado (disponível em até 5 dias úteis);</li>
+                    <li>Aplicativo exclusivo para monitorar progresso, plano alimentar e receitas;</li>
+                    <li>Prescrição de manipulados e suplementos (se necessário);</li>
+                    <li>Suporte via WhatsApp durante todo o acompanhamento.</li>
+                </ul>
+                <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento!" class="btn" aria-label="Saiba mais sobre o acompanhamento via WhatsApp">Saiba Mais</a>
+            </div>
+            <div class="receive-image">
+                <img src="WhatsApp_Image_2025-03-29_at_17.41.03-removebg-preview.png" alt="Imagem do aplicativo exclusivo">
+            </div>
+        </div>
+
+        <!-- Seção Áreas de Atuação -->
+        <div class="section reveal">
+            <h2>Minhas Áreas de Atuação</h2>
+            <div class="areas-section">
+                <div class="areas-list">
+                    <ul>
+                        <li>Reeducação alimentar</li>
+                        <li>Emagrecimento</li>
+                        <li>Hipertrofia</li>
+                        <li>Vegetarianismo</li>
+                        <li>Pré e pós-operatório</li>
+                        <li>Gestantes e lactantes</li>
+                        <li>Tratamento de patologias (hipertensão, diabetes, hipercolesterolemia...)</li>
+                        <li>Transtornos alimentares (bulimia, anorexia, compulsão alimentar...)</li>
+                    </ul>
+                </div>
+                <div class="areas-image">
+                    <img src="3(1).png" alt="Dra. Daiany realizando avaliação física em paciente">
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Planos -->
+        <div class="section reveal">
+            <h2>Planos</h2>
+            <div class="plans">
+                <div class="plan-card">
+                    <h3>Consulta Avulsa</h3>
+                    <p>1 Consulta + 1 retorno (até 50 dias)<br>Avaliação física completa<br>1 Plano alimentar personalizado<br>Aplicativo exclusivo<br>Suporte via WhatsApp por 50 dias</p>
+                    <a href="https://wa.me/5541996009717?text=Olá,%20quero%20agendar%20uma%20consulta%20avulsa!" class="btn" aria-label="Agendar consulta avulsa via WhatsApp">Agendar</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Semestral</h3>
+                    <p>6 Consultas (1 por mês)<br>Avaliação física completa<br>Suporte via WhatsApp<br>Aplicativo exclusivo</p>
+                    <a href="https://wa.me/5541996009717?text=Olá,%20quero%20o%20plano%20semestral!" class="btn" aria-label="Agendar plano semestral via WhatsApp">Agendar</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Online</h3>
+                    <p>Consultas mensais ou avulsas (via WhatsApp)<br>Suporte via WhatsApp<br>Aplicativo exclusivo</p>
+                    <a href="https://wa.me/5541996009717?text=Olá,%20quero%20o%20plano%20online!" class="btn" aria-label="Agendar plano online via WhatsApp">Agendar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Investimento -->
+        <div aforesaid="section reveal">
+            <h2>Investimento</h2>
+            <div class="pricing">
+                <div class="price-card">
+                    <h3>Consulta Avulsa/Online</h3>
+                    <p><strong>Individual:</strong> R$400,00 (Pix/Dinheiro ou até 2x no cartão)<br><strong>Casal/Dupla:</strong> R$740,00 (Pix/Dinheiro ou até 2x no cartão)</p>
+                </div>
+                <div class="price-card">
+                    <h3>Plano Semestral</h3>
+                    <p><strong>Individual:</strong> R$1000,00 (Pix/Dinheiro) ou R$1090,00 (até 6x no cartão)<br><strong>Casal/Dupla:</strong> R$1900,00 (Pix/Dinheiro) ou R$2065,00 (até 6x no cartão)</p>
+                </div>
+            </div>
+            <p><em>Não atendo por Plano de Saúde/Convênios, mas emito recibo para reembolso.</em></p>
+        </div>
+
+        <!-- Seção Depoimentos -->
+        <div class="section reveal">
+            <h2>Depoimentos dos Pacientes</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <h3>Ana Silva</h3>
+                    <p>"A Daiany mudou minha relação com a comida! Com o plano alimentar personalizado, consegui perder peso sem passar fome e ainda melhorei minha energia no dia a dia."</p>
+                </div>
+                <div class="testimonial-card">
+                    <h3>Pedro Almeida</h3>
+                    <p>"Como atleta, o acompanhamento da Daiany foi essencial para otimizar meu desempenho. O suporte dela fez toda a diferença nos meus treinos e competições."</p>
+                </div>
+                <div class="testimonial-card">
+                    <h3>Mariana Costa</h3>
+                    <p>"A abordagem individualizada me ajudou a controlar minha compulsão alimentar. Hoje me sinto mais saudável e confiante, graças ao trabalho incrível da Daiany."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Área de Autoatendimento -->
+        <div class="section reveal">
+            <h2>Área de Autoatendimento</h2>
+            <p>Escolha o eBook perfeito para suas necessidades e receba bônus exclusivos!</p>
+            <div class="self-service">
+                <div class="service-card celiacos">
+                    <h3>Dieta para Celíacos</h3>
+                    <p>Guia completo com receitas e dicas para uma vida sem glúten.</p>
+                    <p><strong>Preço: R$39,90</strong></p>
+                    <a href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=CELIACO_ID" class="btn" target="_blank" aria-label="Comprar eBook Dieta para Celíacos">Comprar Agora</a>
+                    <p class="bonus">Bônus: Guia Básico de Nutrição + Receitas Rápidas</p>
+                </div>
+                <div class="service-card diabeticos">
+                    <h3>Dieta para Diabéticos</h3>
+                    <p>Estratégias e receitas para controlar a glicemia com sabor.</p>
+                    <p><strong>Preço: R$39,90</strong></p>
+                    <a href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=DIABETICO_ID" class="btn" target="_blank" aria-label="Comprar eBook Dieta para Diabéticos">Comprar Agora</a>
+                    <p class="bonus">Bônus: Guia Básico de Nutrição + Receitas Rápidas</p>
+                </div>
+                <div class="service-card hipertensos">
+                    <h3>Dieta para Hipertensos</h3>
+                    <p>Plano alimentar para reduzir a pressão arterial naturalmente.</p>
+                    <p><strong>Preço: R$39,90</strong></p>
+                    <a href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=HIPERTENSO_ID" class="btn" target="_blank" aria-label="Comprar eBook Dieta para Hipertensos">Comprar Agora</a>
+                    <p class="bonus">Bônus: Guia Básico de Nutrição + Receitas Rápidas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Contato e Localização -->
+        <div class="contact-location reveal">
+            <!-- Seção de Contato -->
+            <div class="contact-section">
+                <h2>Entre em Contato</h2>
+                <form action="mailto:nutri.fernandesdaiany@gmail.com" method="post" enctype="text/plain">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <div class="contact-buttons">
+                        <button type="submit" class="btn">Enviar por Email</button>
+                        <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20entrar%20em%20contato!" class="btn" target="_blank" aria-label="Entrar em contato via WhatsApp">Contato via WhatsApp</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Seção de Localização -->
+            <div class="location-section">
+                <h2>Localização</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7798079380023!2d-49.4010809!3d-25.578991499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd032d19c711a1%3A0x44f21be04cec2b46!2sNutricionista%20-%20Daiany%20Fernandes!5e0!3m2!1spt-BR!2sbr!4v1742934612161!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Nutricionista Daiany Fernandes. Todos os direitos reservados.</p>
+        <div class="social-btns">
+            <a href="https://wa.me/5541996009717" class="btn" target="_blank" aria-label="Contato via WhatsApp">WhatsApp</a>
+            <a href="https://www.instagram.com/nutri.daianyfernandes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn" target="_blank" aria-label="Perfil no Instagram">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- BOTÕES FLUTUANTES -->
+    <div class="float-buttons">
+        <a href="https://wa.me/5541996009717?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta!" 
+           class="float-btn whatsapp-btn" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Agendar consulta via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>Agendar Consulta</span>
+        </a>
+        
+        <a href="https://www.instagram.com/nutri.daianyfernandes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+           class="float-btn instagram-btn" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+    </div>
+
+    <!-- Script para ScrollReveal -->
+    <script>
+        ScrollReveal().reveal('.reveal', {
+            duration: 1000,
+            distance: '30px',
+            origin: 'bottom',
+            easing: 'ease-in-out',
+            delay: 200,
+            interval: 200
+        });
+    </script>
+</body>
+</html>
